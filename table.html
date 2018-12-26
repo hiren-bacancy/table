@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Generator</title>
+        <style>
+            div{
+               width: 40%;
+               border: 2px solid black;
+               margin-left: 30%;
+               margin-right: 30%;
+            }
+            input{
+                padding: 6px;
+                color: cornflowerblue;
+                background-color: azure;
+                border-radius: 6px;
+                margin: 3%;
+                
+            }
+            button{
+                background-color: blue;
+                color: azure;
+                padding: 5px;
+                border-radius: 7px;
+            }
+            p{
+                color: cornflowerblue;
+                margin: 13%;
+            }
+        </style>
+    </head>
+    <body>
+       <div>
+           <p><input type="number" id="num">
+           <button onclick="mul()">Generate Table</button></p>
+           <p id="ans"></p>
+       </div>
+       <script>
+           function mul()
+           {
+                var a = document.getElementById("num").value; 
+                var b="";
+                for(var i=1;i<=10;i++)
+                {
+                   b = b+" "+a+" "+"*"+" "+i+" "+"="+" "+a*i+"</br><hr>";
+                }
+                document.getElementById("ans").innerHTML=b;
+            }
+       </script>
+    </body>
+</html>
